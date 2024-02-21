@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+/*Formato de la pagina*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    outline: none; 
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    text-transform: capitalize;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    min-height: 100vh;
+}
+
+header .brand img{
+    height: 70px;
+}
+
+.p-main {
+    margin-bottom: 40px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    padding: 0 0px;
+}
+
+
+.btn-is {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 20px 50px;
+    font-size: 22px;
+    border: 2px solid #9c27b0;
+    color: #fff;
+    text-decoration: none;
+    background: #9c27b0;
+    border-radius: 15px;
+}
+
+.btn-is:hover {
+    background: none;
+    position: relative;
+    z-index: 1; 
+}
+
+.btn-home {
+    display: flex;
+}
+
+.btn-home a{
+    margin: 0 10px;
+}
+
+/*Contenido del head y body*/
+.section-main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to left, rgba(34, 42, 104, 0.3), rgba(0,0,0,0.8)), 
+    url(../img/fondo-principal.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 80px;
+}
+
+.section-main h1{
+    color: rgb(255, 255, 255, 0.8);
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 80px;
+    text-shadow: 
+    0 0 5px #fff, 
+    0 0 15px #000, 
+    0 0 15px #000, /* Añadir más sombras */
+    0 0 15px #000;
+    text-align: center;
+}
+
+header{
+    z-index: 999;
+    position: fixed;
+    top:  0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+}
+
+header.down{
+    background: #333;
+}
+
+header .brand{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /*text-decoration: none;*/
+    letter-spacing: 2px;
+}
+
+header .menu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .menu ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .menu ul li{
+    list-style: none;
+}
+
+header .menu a {
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    /*text-decoration: none;*/
+    margin: 0 30px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: color, background;
+}
+
+header .menu  a:hover {
+    color: #000;
+    background: #AB81CD;
+}
+
+.section-two{
+    text-align: center;
+    background: #1f1d1d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.section-two h3{
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section-two h3 strong{
+    text-transform: uppercase;
+}
+
+.section-two p{
+    font-size: 2.2rem;
+    color: #fff;
+    
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+
+.box-container .box{ 
+    height: 13rem;
+    width: 19rem;
+    background: #000000;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 .3rem 5rem rgba(0, 0, 0, .5);
+    margin: 2rem;
+}
+
+.box-container .box i {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #ffffff;
+    background: #9c27b0;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.box-container .box h3 {
+    font-size: 20px;
+    color: #9c27b0;
+}
+
+header .btn{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+/*Seccion de los ejercicios*/
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.container .title{
+    font-size: 3.5rem;
+    color: #FFF;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container .subtitle{
+    font-size: 2.0rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container .product-container{
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.container .product-container .product{
+    text-align: center;
+    padding: 0.1rem 1.2rem;
+    background: #AB81CD;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.4);
+    outline: 0.1rem solid #1f1d1d;
+    outline-offset: -1rem;
+    cursor: pointer;
+    border-radius: 20PX;
+}
+
+.container .product-container .product:hover{
+    outline: 0.2rem solid #222;
+    outline-offset: 0;
+}
+
+.container .product-container .product h3{
+    padding: 0.5rem 0;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.container .product-container .product:hover h3{
+    color: #1f1d1d;
+}
+
+.products-preview{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.products-preview .preview{
+    display: none;
+    padding: 0.5rem;
+    text-align: center;
+    background: #333;
+    position: relative;
+    margin: 0.5rem;
+    width: 35rem;
+    border-radius: 15px;
+}
+
+.products-preview .preview.active{
+    display: inline-block;
+}
+
+.products-preview .preview .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 3rem;
+}
+
+.products-preview .preview .fa-times:hover{
+    transform: rotate(90deg);
+}
+
+.products-preview .preview h3{
+    color: #fff;
+    padding: 0.5rem 0;
+    font-size: 2rem;
+}
+
+.products-preview .preview p{
+    line-height: 1.5;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.products-preview .preview .lenguaje{
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #AB81CD;
+}
+
+.products-preview .preview .button{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.products-preview .preview .button a{
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: #AB81CD;
+    border: 0.1rem solid #AB81CD;
+    border-radius: 15px;
+}
+
+.products-preview .preview .button a:hover{
+    background: #6d6d6d;
+    color: #fff;
+}
+
+.container .product-container a{
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    border: 2px solid #747474;
+}
+
+.container .product-container a:hover{
+    background: #747474;
+}
+
+.price {
+    position: relative; /* Asegurar que la posición del elemento sea relativa para posicionar el pseudo-elemento */
+    background: url(../img/fondo-price.jpeg) no-repeat center; /* Imagen de fondo */
+    background-attachment: fixed; /* Fondo fijo */
+    background-size: cover; /* Ajustar la imagen de fondo */
+    text-align: center; /* Alinear el texto al centro */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espacio alrededor del texto */
+}
+
+.price::before {
+    content: ""; /* Contenido del pseudo-elemento */
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Alinear en la parte superior */
+    left: 0; /* Alinear en la parte izquierda */
+    width: 100%; /* Ancho igual al del elemento principal */
+    height: 100%; /* Altura igual al del elemento principal */
+    background-color: rgba(0, 0, 0, 0.4); /* Color de fondo oscuro con transparencia */
+    z-index: 0; /* Asegurar que el pseudo-elemento esté detrás del contenido */
+}
+
+.price * {
+    position: relative; /* Asegurar que el texto esté posicionado relativo */
+    z-index: 1; /* Asegurar que el texto esté por encima de la capa oscura */
+}
+
+.btn-more-info {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 40px;
+    border: 2px solid #9c27b0;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    background: #9c27b0;
+    border-radius: 20px;
+}
+
+.btn-more-info:hover {
+    background: none;
+}
+
+/*  Estilo del formulario*/
+
+  form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #574AE2;
+    margin: 30px 0;
+  }
+  .txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: #adadad;
+  }
+  .txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+  }
+  .txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #AB81CD;
+    transition: .5s;
+  }
+  .txt_field input:focus ~ label,
+  .txt_field input:valid ~ label{
+    top: -5px;
+    color: #AB81CD;
+  }
+  .txt_field input:focus ~ span::before,
+  .txt_field input:valid ~ span::before{
+    width: 100%;
+  }
+
+  input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #574AE2;
+    background: #574AE2;
+    border-radius: 15px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+  }
+  input[type="submit"]:hover{
+    border-color: #654597;
+    background: #654597;
+    transition: .5s;
+  }
+  
+/*Contenido del Footer*/
+.footer-main{
+    width: 100%;
+    background-color: #654597;
+}
+
+.footer-main .group1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.footer-main .group1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-main .group1 .box figure .IpnFoot{
+    width: 80px;
+}
+.footer-main .group1 .box figure .EscomFoot{
+    width: 80px;
+}
+
+.footer-main .group1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.footer-main .group1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.footer-main .group1 .red-social a{
+    display: inline-block;
+    /*text-decoration: none;*/
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #9c27b0;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.footer-main .group1 .red-social a:hover{
+    color: #AB81CD;
+}
+
+.footer-main .group2{
+    background-color: #9c27b0;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+/*Modificacion en funcion del dispositivo*/
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+        min-height: 1280px;
+     }
+    header, header.down{
+        padding: 20px 40px;
+    }
+    header .btn{
+        display: block;
+    }
+    header .menu{
+        position: fixed;
+        background: #654597;
+        min-width: 33px;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        padding: 80px 50px;
+        transition: 0.5s;
+        transition-property: right;
+    }
+    header .menu ul{
+        flex-direction: column;
+    }
+    header .menu.active{
+        right: 0;
+    }
+    header .menu .close-btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+    }
+    header .menu a{
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width:600px){
+    .section-main h1{
+        font-size: 50px;
+        line-height: 60px;
+    }
+}
+
+@media (max-width:768px){
+    .products-preview .preview img{
+       height: 25rem;
+    }
+ }
+ 
+ @media (max-width:450px){
+    html{
+       font-size: 50%;
+    }
+ }

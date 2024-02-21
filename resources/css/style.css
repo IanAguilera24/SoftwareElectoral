@@ -1,0 +1,107 @@
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+.back_dark_color {
+  background-color: #333;
+  color: #ddd;
+}
+
+#percent {
+  border-radius: 20px;
+}
+
+#messages, #new_visitors, #demographic{
+  background-color: #574AE2;
+  color: #ddd;
+  border-radius: 20px;
+}
+
+#views, #new_users {
+  background-color: #222A68;
+  color: #ddd;
+  border-radius: 20px;
+}
+
+#shares, #bounce_rate, #systems {
+  background-color: #654597;
+  color: #ddd;
+  border-radius: 20px;
+}
+
+#users, #other_rate, #target {
+  background-color: #AB81CD;
+  color: #ddd;
+  border-radius: 20px;
+}
+
+#messages:hover {
+  background-color: #3A34A2; /* Cambiar el color de fondo cuando se pasa el mouse */
+}
+
+#views:hover {
+  background-color: #1A1F52;
+}
+
+#shares:hover {
+  background-color: #4B3973;
+}
+
+#users:hover {
+  background-color: #8F6BA8;
+}
+
+#histogram {
+  width: 100%; /* Ajustar al ancho del contenedor */
+  height: 300px; /* Altura fija */
+  border: 1px solid black;
+  position: relative; /* Ajustar posición absoluta de las barras */
+  border-radius: 20px;
+}
+
+.bar {
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: 0; /* Alinear las barras en la parte inferior del contenedor */
+  width: calc(100% / var(--num-bars) - 10px); /* Ancho dinámico de las barras */
+  background-color: #8F6BA8;
+  margin: 0 5px; /* Espacio entre las barras */
+  border-radius: 20px;
+}
+
+.bar-label {
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: -20px; /* Espacio entre la barra y el nombre */
+  left: 50%; /* Centrar el nombre horizontalmente */
+  transform: translateX(-50%); /* Centrar el nombre horizontalmente */
+  font-size: 14px; /* Tamaño del texto */
+}
+
+.bar-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.image_position {
+  position: relative; /* Hacer que el contenedor sea relativo para posicionar la imagen */
+  width: 100%; /* Hacer que el contenedor ocupe el ancho completo */
+  height: 100vh; /* Permitir que la altura del contenedor se ajuste automáticamente según el contenido */
+  overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+}
+
+.image_position img {
+  width: auto; /* Permitir que el ancho de la imagen se ajuste automáticamente */
+  height: auto; /* Permitir que la altura de la imagen se ajuste automáticamente */
+  max-width: 100%; /* Limitar el ancho máximo de la imagen al ancho del contenedor */
+  max-height: 100%; /* Limitar la altura máxima de la imagen a la altura del contenedor */
+  object-fit: cover; /* Ajustar la imagen dentro del contenedor cubriéndolo completamente */
+  display: block; /* Asegurarse de que la imagen se muestre como un bloque */
+  margin: auto; /* Centrar la imagen horizontalmente */
+  position: absolute; /* Posicionar la imagen absolutamente dentro del contenedor */
+  top: 0; /* Alinear la imagen en la parte superior del contenedor */
+  left: 0; /* Alinear la imagen en la parte izquierda del contenedor */
+  right: 0; /* Alinear la imagen en la parte derecha del contenedor */
+  bottom: 0; /* Alinear la imagen en la parte inferior del contenedor */
+}
